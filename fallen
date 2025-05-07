@@ -91,13 +91,18 @@ Lock.ScaleType = Enum.ScaleType.Fit
 
 TextLabel.Parent = Lock
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = ""
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(1.0333333, 0, 0.166666672, 0)
+TextLabel.Size = UDim2.new(0, 94, 0, 25)
+TextLabel.Font = Enum.Font.Arcade
+TextLabel.Text = "Lock"
+TextLabel.TextColor3 = Color3.fromRGB(117, 25, 255)
+TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
 Player.Name = "Player"
 Player.Parent = Catagories
@@ -447,7 +452,7 @@ Misc_2.ZIndex = 2
 
 -- Scripts:
 
-local function ZGGBEZ_fake_script() -- Lock_3.LocalScript 
+local function YQWW_fake_script() -- Lock_3.LocalScript 
 	local script = Instance.new('LocalScript', Lock_3)
 
 	local userInputService = game:GetService("UserInputService")
@@ -457,7 +462,7 @@ local function ZGGBEZ_fake_script() -- Lock_3.LocalScript
 	
 	local aimlockKey = Enum.KeyCode.F
 	local aiming = false
-	local settingKey = false
+	local lockedPlayer = nil
 	local textButton = script.Parent.Parent:WaitForChild("LockKeybind")
 	
 	local function enableAimlock()
@@ -466,6 +471,7 @@ local function ZGGBEZ_fake_script() -- Lock_3.LocalScript
 	
 	local function disableAimlock()
 		aiming = false
+		lockedPlayer = nil
 	end
 	
 	local function getNearestPlayerToMouse()
@@ -491,9 +497,12 @@ local function ZGGBEZ_fake_script() -- Lock_3.LocalScript
 	
 	local function updateCamera()
 		if aiming then
-			local closestPlayer = getNearestPlayerToMouse()
-			if closestPlayer then
-				local humanoidRoot = closestPlayer.Character:FindFirstChild("HumanoidRootPart")
+			if not lockedPlayer then
+				lockedPlayer = getNearestPlayerToMouse()
+			end
+	
+			if lockedPlayer then
+				local humanoidRoot = lockedPlayer.Character:FindFirstChild("HumanoidRootPart")
 				if humanoidRoot then
 					camera.CFrame = CFrame.new(camera.CFrame.Position, humanoidRoot.Position)
 				end
@@ -504,14 +513,7 @@ local function ZGGBEZ_fake_script() -- Lock_3.LocalScript
 	local function onKeyPress(input, gameProcessedEvent)
 		if gameProcessedEvent then return end
 	
-		if settingKey then
-			if input.UserInputType == Enum.UserInputType.Keyboard then
-				aimlockKey = input.KeyCode
-				print("Keybind set to:", aimlockKey.Name)
-				textButton.Text = aimlockKey.Name
-				settingKey = false
-			end
-		elseif input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == aimlockKey then
+		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == aimlockKey then
 			if aiming then
 				disableAimlock()
 				print("Aimlock deactivated!")
@@ -533,8 +535,8 @@ local function ZGGBEZ_fake_script() -- Lock_3.LocalScript
 	game:GetService("RunService").RenderStepped:Connect(updateCamera)
 	
 end
-coroutine.wrap(ZGGBEZ_fake_script)()
-local function VTHGG_fake_script() -- SpeedSlider.Main 
+coroutine.wrap(YQWW_fake_script)()
+local function SZWA_fake_script() -- SpeedSlider.Main 
 	local script = Instance.new('LocalScript', SpeedSlider)
 
 	local Players = game:GetService("Players")
@@ -633,8 +635,8 @@ local function VTHGG_fake_script() -- SpeedSlider.Main
 	end)
 	
 end
-coroutine.wrap(VTHGG_fake_script)()
-local function EDBD_fake_script() -- JumpSlider.Main 
+coroutine.wrap(SZWA_fake_script)()
+local function FSWTW_fake_script() -- JumpSlider.Main 
 	local script = Instance.new('LocalScript', JumpSlider)
 
 	local Players = game:GetService("Players")
@@ -733,8 +735,8 @@ local function EDBD_fake_script() -- JumpSlider.Main
 	end)
 	
 end
-coroutine.wrap(EDBD_fake_script)()
-local function EKTJKS_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(FSWTW_fake_script)()
+local function FTTPTK_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	local player = game.Players.LocalPlayer
@@ -819,8 +821,8 @@ local function EKTJKS_fake_script() -- Noclip.LocalScript
 	setKeybindButton.Text = currentKeybind.Name
 	
 end
-coroutine.wrap(EKTJKS_fake_script)()
-local function IIPJDY_fake_script() -- Frame.Tabs 
+coroutine.wrap(FTTPTK_fake_script)()
+local function OZHOK_fake_script() -- Frame.Tabs 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Lock = script.Parent:WaitForChild("Lock")
@@ -861,8 +863,8 @@ local function IIPJDY_fake_script() -- Frame.Tabs
 		Misc.Visible = true
 	end)
 end
-coroutine.wrap(IIPJDY_fake_script)()
-local function ZXEAT_fake_script() -- Frame.Dragging 
+coroutine.wrap(OZHOK_fake_script)()
+local function YMETY_fake_script() -- Frame.Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -910,8 +912,8 @@ local function ZXEAT_fake_script() -- Frame.Dragging
 	end)
 	
 end
-coroutine.wrap(ZXEAT_fake_script)()
-local function NTBHM_fake_script() -- Fallen.Toggle 
+coroutine.wrap(YMETY_fake_script)()
+local function BWTYLUO_fake_script() -- Fallen.Toggle 
 	local script = Instance.new('LocalScript', Fallen)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -929,4 +931,4 @@ local function NTBHM_fake_script() -- Fallen.Toggle
 	end)
 	
 end
-coroutine.wrap(NTBHM_fake_script)()
+coroutine.wrap(BWTYLUO_fake_script)()
