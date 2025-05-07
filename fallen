@@ -1,0 +1,887 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Fallen = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Catagories = Instance.new("Frame")
+local Lock = Instance.new("ImageButton")
+local Player = Instance.new("ImageButton")
+local Visual = Instance.new("ImageButton")
+local Misc = Instance.new("ImageButton")
+local Lock_2 = Instance.new("Frame")
+local Section1 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Lock_3 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local LockKeybind = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Player_2 = Instance.new("Frame")
+local SpeedSlider = Instance.new("Frame")
+local Label = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local Trigger = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Fill = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
+local SpeedKeybind = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local WalkSpeed = Instance.new("TextLabel")
+local JumpSlider = Instance.new("Frame")
+local Label_2 = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local Trigger_2 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Fill_2 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
+local JumpKeybind = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local JumpPower = Instance.new("TextLabel")
+local Noclip = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local Noclip_2 = Instance.new("TextLabel")
+local NoclipKeybind = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local Visual_2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Misc_2 = Instance.new("Frame")
+
+--Properties:
+
+Fallen.Name = "Fallen"
+Fallen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Fallen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Fallen
+Frame.BackgroundColor3 = Color3.fromRGB(31, 0, 47)
+Frame.BorderColor3 = Color3.fromRGB(30, 17, 42)
+Frame.BorderSizePixel = 10
+Frame.Position = UDim2.new(0.423575729, -222, 0.491640538, -273)
+Frame.Size = UDim2.new(0, 773, 0, 561)
+
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = Frame
+
+Catagories.Name = "Catagories"
+Catagories.Parent = Frame
+Catagories.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Catagories.BackgroundTransparency = 1.000
+Catagories.BorderColor3 = Color3.fromRGB(30, 17, 42)
+Catagories.BorderSizePixel = 0
+Catagories.Position = UDim2.new(0.0191082805, 0, 0.00699999603, 0)
+Catagories.Size = UDim2.new(0, 307, 0, 30)
+
+Lock.Name = "Lock"
+Lock.Parent = Catagories
+Lock.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lock.BackgroundTransparency = 1.000
+Lock.BorderColor3 = Color3.fromRGB(30, 17, 42)
+Lock.BorderSizePixel = 0
+Lock.Position = UDim2.new(0, 0, 0.5, -15)
+Lock.Size = UDim2.new(0, 30, 0, 30)
+Lock.Image = "http://www.roblox.com/asset/?id=101509354222976"
+Lock.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Lock.ScaleType = Enum.ScaleType.Fit
+
+Player.Name = "Player"
+Player.Parent = Catagories
+Player.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Player.BackgroundTransparency = 1.000
+Player.BorderColor3 = Color3.fromRGB(30, 17, 42)
+Player.BorderSizePixel = 0
+Player.Position = UDim2.new(0.409674138, 0, 0.5, -15)
+Player.Size = UDim2.new(0, 30, 0, 30)
+Player.Image = "http://www.roblox.com/asset/?id=79083936017713"
+Player.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+Visual.Name = "Visual"
+Visual.Parent = Catagories
+Visual.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Visual.BackgroundTransparency = 1.000
+Visual.BorderColor3 = Color3.fromRGB(30, 17, 42)
+Visual.BorderSizePixel = 0
+Visual.Position = UDim2.new(0.864951074, 0, 0.5, -15)
+Visual.Size = UDim2.new(0, 30, 0, 30)
+Visual.Image = "http://www.roblox.com/asset/?id=140616675700238"
+Visual.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+Misc.Name = "Misc"
+Misc.Parent = Catagories
+Misc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Misc.BackgroundTransparency = 1.000
+Misc.BorderColor3 = Color3.fromRGB(30, 17, 42)
+Misc.BorderSizePixel = 0
+Misc.Position = UDim2.new(1.3560586, 0, 0.5, -15)
+Misc.Size = UDim2.new(0, 30, 0, 30)
+Misc.Image = "http://www.roblox.com/asset/?id=119872278410367"
+Misc.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+Lock_2.Name = "Lock"
+Lock_2.Parent = Frame
+Lock_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lock_2.BackgroundTransparency = 1.000
+Lock_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Lock_2.BorderSizePixel = 0
+Lock_2.Position = UDim2.new(0.0222929139, 0, 0.0951276943, 0)
+Lock_2.Size = UDim2.new(0, 739, 0, 498)
+Lock_2.ZIndex = 2
+
+Section1.Name = "Section1"
+Section1.Parent = Lock_2
+Section1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Section1.BackgroundTransparency = 1.000
+Section1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Section1.BorderSizePixel = 0
+Section1.Size = UDim2.new(0, 313, 0, 303)
+
+UICorner_2.Parent = Section1
+
+Lock_3.Name = "Lock"
+Lock_3.Parent = Section1
+Lock_3.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
+Lock_3.BackgroundTransparency = 1.000
+Lock_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Lock_3.BorderSizePixel = 0
+Lock_3.Position = UDim2.new(0, 7, 0, 6)
+Lock_3.Size = UDim2.new(0.094828479, 0, 0.0548533536, 0)
+Lock_3.ZIndex = 100
+Lock_3.AutoButtonColor = false
+Lock_3.Font = Enum.Font.Unknown
+Lock_3.Text = "Lock"
+Lock_3.TextColor3 = Color3.fromRGB(117, 25, 255)
+Lock_3.TextSize = 14.000
+
+UICorner_3.CornerRadius = UDim.new(0, 4)
+UICorner_3.Parent = Lock_3
+
+LockKeybind.Name = "LockKeybind"
+LockKeybind.Parent = Section1
+LockKeybind.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
+LockKeybind.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LockKeybind.BorderSizePixel = 0
+LockKeybind.Position = UDim2.new(0.251788735, 0, -0.247239411, 80)
+LockKeybind.Size = UDim2.new(0, 20, 0, 20)
+LockKeybind.Font = Enum.Font.Arcade
+LockKeybind.Text = "X"
+LockKeybind.TextColor3 = Color3.fromRGB(117, 25, 255)
+LockKeybind.TextScaled = true
+LockKeybind.TextSize = 14.000
+LockKeybind.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 4)
+UICorner_4.Parent = LockKeybind
+
+Player_2.Name = "Player"
+Player_2.Parent = Frame
+Player_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Player_2.BackgroundTransparency = 1.000
+Player_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Player_2.BorderSizePixel = 0
+Player_2.Position = UDim2.new(0.022292994, 0, 0.0951276794, 0)
+Player_2.Size = UDim2.new(0, 739, 0, 498)
+Player_2.Visible = false
+Player_2.ZIndex = 2
+
+SpeedSlider.Name = "SpeedSlider"
+SpeedSlider.Parent = Player_2
+SpeedSlider.BackgroundColor3 = Color3.fromRGB(31, 0, 47)
+SpeedSlider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpeedSlider.BorderSizePixel = 0
+SpeedSlider.Position = UDim2.new(0.327242523, -100, 0.0732984319, -10)
+SpeedSlider.Size = UDim2.new(0, 200, 0, 20)
+
+Label.Name = "Label"
+Label.Parent = SpeedSlider
+Label.BackgroundColor3 = Color3.fromRGB(31, 0, 47)
+Label.BackgroundTransparency = 1.000
+Label.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Label.BorderSizePixel = 0
+Label.Size = UDim2.new(1, 0, 1, 0)
+Label.ZIndex = 15
+Label.Font = Enum.Font.Arcade
+Label.Text = "0"
+Label.TextColor3 = Color3.fromRGB(117, 25, 255)
+Label.TextSize = 14.000
+
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = Label
+
+Trigger.Name = "Trigger"
+Trigger.Parent = SpeedSlider
+Trigger.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
+Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger.BorderSizePixel = 0
+Trigger.Size = UDim2.new(1, 0, 1, 0)
+Trigger.AutoButtonColor = false
+Trigger.Font = Enum.Font.SourceSans
+Trigger.Text = ""
+Trigger.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = Trigger
+
+Fill.Name = "Fill"
+Fill.Parent = SpeedSlider
+Fill.BackgroundColor3 = Color3.fromRGB(0, 0, 127)
+Fill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fill.BorderSizePixel = 0
+Fill.Size = UDim2.new(0, 0, 1, 0)
+Fill.ZIndex = 10
+
+UICorner_7.CornerRadius = UDim.new(0, 2)
+UICorner_7.Parent = Fill
+
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = Fill
+
+SpeedKeybind.Name = "SpeedKeybind"
+SpeedKeybind.Parent = Player_2
+SpeedKeybind.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
+SpeedKeybind.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpeedKeybind.BorderSizePixel = 0
+SpeedKeybind.Position = UDim2.new(0.681063116, 0, 0.0471204184, 0)
+SpeedKeybind.Size = UDim2.new(0, 20, 0, 20)
+SpeedKeybind.Font = Enum.Font.Arcade
+SpeedKeybind.Text = "V"
+SpeedKeybind.TextColor3 = Color3.fromRGB(117, 25, 255)
+SpeedKeybind.TextScaled = true
+SpeedKeybind.TextSize = 14.000
+SpeedKeybind.TextWrapped = true
+
+UICorner_9.CornerRadius = UDim.new(0, 4)
+UICorner_9.Parent = SpeedKeybind
+
+WalkSpeed.Name = "Walk Speed"
+WalkSpeed.Parent = Player_2
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.BackgroundTransparency = 1.000
+WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeed.BorderSizePixel = 0
+WalkSpeed.Position = UDim2.new(0.0232558139, 0, 0, 0)
+WalkSpeed.Size = UDim2.new(0, 66, 0, 18)
+WalkSpeed.Font = Enum.Font.Arcade
+WalkSpeed.Text = "Walk Speed"
+WalkSpeed.TextColor3 = Color3.fromRGB(117, 25, 255)
+WalkSpeed.TextSize = 14.000
+
+JumpSlider.Name = "JumpSlider"
+JumpSlider.Parent = Player_2
+JumpSlider.BackgroundColor3 = Color3.fromRGB(31, 0, 47)
+JumpSlider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JumpSlider.BorderSizePixel = 0
+JumpSlider.Position = UDim2.new(0.326999992, -100, 0.0729999989, 25)
+JumpSlider.Size = UDim2.new(0, 200, 0, 20)
+
+Label_2.Name = "Label"
+Label_2.Parent = JumpSlider
+Label_2.BackgroundColor3 = Color3.fromRGB(31, 0, 47)
+Label_2.BackgroundTransparency = 1.000
+Label_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Label_2.BorderSizePixel = 0
+Label_2.Size = UDim2.new(1, 0, 1, 0)
+Label_2.ZIndex = 15
+Label_2.Font = Enum.Font.Arcade
+Label_2.Text = "0"
+Label_2.TextColor3 = Color3.fromRGB(117, 25, 255)
+Label_2.TextSize = 14.000
+
+UICorner_10.CornerRadius = UDim.new(0, 4)
+UICorner_10.Parent = Label_2
+
+Trigger_2.Name = "Trigger"
+Trigger_2.Parent = JumpSlider
+Trigger_2.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
+Trigger_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_2.BorderSizePixel = 0
+Trigger_2.Size = UDim2.new(1, 0, 1, 0)
+Trigger_2.AutoButtonColor = false
+Trigger_2.Font = Enum.Font.SourceSans
+Trigger_2.Text = ""
+Trigger_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_2.TextSize = 14.000
+
+UICorner_11.CornerRadius = UDim.new(0, 4)
+UICorner_11.Parent = Trigger_2
+
+Fill_2.Name = "Fill"
+Fill_2.Parent = JumpSlider
+Fill_2.BackgroundColor3 = Color3.fromRGB(0, 0, 127)
+Fill_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fill_2.BorderSizePixel = 0
+Fill_2.Size = UDim2.new(0, 0, 1, 0)
+Fill_2.ZIndex = 10
+
+UICorner_12.CornerRadius = UDim.new(0, 2)
+UICorner_12.Parent = Fill_2
+
+UICorner_13.CornerRadius = UDim.new(0, 4)
+UICorner_13.Parent = Fill_2
+
+JumpKeybind.Name = "JumpKeybind"
+JumpKeybind.Parent = Player_2
+JumpKeybind.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
+JumpKeybind.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JumpKeybind.BorderSizePixel = 0
+JumpKeybind.Position = UDim2.new(0.680999994, 0, 0.0469999984, 35)
+JumpKeybind.Size = UDim2.new(0, 20, 0, 20)
+JumpKeybind.Font = Enum.Font.Arcade
+JumpKeybind.Text = "C"
+JumpKeybind.TextColor3 = Color3.fromRGB(117, 25, 255)
+JumpKeybind.TextScaled = true
+JumpKeybind.TextSize = 14.000
+JumpKeybind.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0, 4)
+UICorner_14.Parent = JumpKeybind
+
+JumpPower.Name = "Jump Power"
+JumpPower.Parent = Player_2
+JumpPower.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+JumpPower.BackgroundTransparency = 1.000
+JumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JumpPower.BorderSizePixel = 0
+JumpPower.Position = UDim2.new(0.023, 0, 0.0949999988, 0)
+JumpPower.Size = UDim2.new(0, 66, 0, 18)
+JumpPower.Font = Enum.Font.Arcade
+JumpPower.Text = "Jump Power"
+JumpPower.TextColor3 = Color3.fromRGB(117, 25, 255)
+JumpPower.TextSize = 14.000
+
+Noclip.Name = "Noclip"
+Noclip.Parent = Player_2
+Noclip.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
+Noclip.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Noclip.BorderSizePixel = 0
+Noclip.Position = UDim2.new(0, -2, 0, 97)
+Noclip.Size = UDim2.new(0.665870428, 0, 0.0548533499, 0)
+Noclip.ZIndex = 100
+Noclip.AutoButtonColor = false
+Noclip.Font = Enum.Font.Unknown
+Noclip.Text = "Noclip"
+Noclip.TextColor3 = Color3.fromRGB(117, 25, 255)
+Noclip.TextSize = 14.000
+
+UICorner_15.CornerRadius = UDim.new(0, 4)
+UICorner_15.Parent = Noclip
+
+Noclip_2.Name = "Noclip"
+Noclip_2.Parent = Player_2
+Noclip_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Noclip_2.BackgroundTransparency = 1.000
+Noclip_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Noclip_2.BorderSizePixel = 0
+Noclip_2.Position = UDim2.new(-0.0199999996, 0, 0.209999993, 0)
+Noclip_2.Size = UDim2.new(0, 66, 0, 18)
+Noclip_2.Font = Enum.Font.Arcade
+Noclip_2.Text = "Noclip"
+Noclip_2.TextColor3 = Color3.fromRGB(117, 25, 255)
+Noclip_2.TextSize = 14.000
+
+NoclipKeybind.Name = "NoclipKeybind"
+NoclipKeybind.Parent = Player_2
+NoclipKeybind.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
+NoclipKeybind.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NoclipKeybind.BorderSizePixel = 0
+NoclipKeybind.Position = UDim2.new(0.680999994, 0, 0.0469999984, 80)
+NoclipKeybind.Size = UDim2.new(0, 20, 0, 20)
+NoclipKeybind.Font = Enum.Font.Arcade
+NoclipKeybind.Text = "X"
+NoclipKeybind.TextColor3 = Color3.fromRGB(117, 25, 255)
+NoclipKeybind.TextScaled = true
+NoclipKeybind.TextSize = 14.000
+NoclipKeybind.TextWrapped = true
+
+UICorner_16.CornerRadius = UDim.new(0, 4)
+UICorner_16.Parent = NoclipKeybind
+
+Visual_2.Name = "Visual"
+Visual_2.Parent = Frame
+Visual_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Visual_2.BackgroundTransparency = 1.000
+Visual_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Visual_2.BorderSizePixel = 0
+Visual_2.Position = UDim2.new(0.0219999999, 0, 0.0949999988, 0)
+Visual_2.Size = UDim2.new(0, 739, 0, 498)
+Visual_2.Visible = false
+Visual_2.ZIndex = 6
+
+TextLabel.Parent = Visual_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0199335553, 0, 0.018324608, 0)
+TextLabel.Size = UDim2.new(0, 30, 0, 15)
+TextLabel.Font = Enum.Font.Roboto
+TextLabel.Text = "ESP"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+Misc_2.Name = "Misc"
+Misc_2.Parent = Frame
+Misc_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Misc_2.BackgroundTransparency = 1.000
+Misc_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Misc_2.BorderSizePixel = 0
+Misc_2.Position = UDim2.new(0.022292994, 0, 0.0951276794, 0)
+Misc_2.Size = UDim2.new(0, 739, 0, 498)
+Misc_2.Visible = false
+Misc_2.ZIndex = 2
+
+-- Scripts:
+
+local function OVER_fake_script() -- Lock_3.LocalScript 
+	local script = Instance.new('LocalScript', Lock_3)
+
+	local userInputService = game:GetService("UserInputService")
+	local camera = game.Workspace.CurrentCamera
+	local targetPart = workspace:WaitForChild("TargetPart")
+	
+	local aiming = false
+	local keybind = Enum.KeyCode.F
+	
+	local textButton = script.Parent.Parent:WaitForChild("LockKeybind")
+	
+	local settingKey = false
+	
+	local function hardLockAim()
+		local targetPosition = targetPart.Position
+		camera.CFrame = CFrame.new(camera.CFrame.Position, targetPosition)
+	end
+	
+	local function onKeyPress(input, gameProcessedEvent)
+		if gameProcessedEvent then return end
+		if settingKey then
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				keybind = input.KeyCode
+				print("Keybind set to:", keybind.Name)
+				textButton.Text = keybind.Name
+				settingKey = false
+			end
+		elseif input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == keybind then
+			aiming = not aiming
+			if aiming then
+				print("Hard lock aim activated!")
+			else
+				print("Hard lock aim deactivated!")
+			end
+		end
+	end
+	
+	local function onButtonClick()
+		settingKey = true
+		print("Press a key to set the keybind...")
+	end
+	
+	textButton.MouseButton1Click:Connect(onButtonClick)
+	userInputService.InputBegan:Connect(onKeyPress)
+	
+	game:GetService("RunService").Heartbeat:Connect(function()
+		if aiming then
+			hardLockAim()
+		end
+	end)
+	
+end
+coroutine.wrap(OVER_fake_script)()
+local function CXKWF_fake_script() -- SpeedSlider.Main 
+	local script = Instance.new('LocalScript', SpeedSlider)
+
+	local Players = game:GetService("Players")
+	local TweenService = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local player = Players.LocalPlayer
+	local mouse = player:GetMouse()
+	
+	local slider = script.Parent
+	local fill = slider:WaitForChild("Fill")
+	local trigger = slider:WaitForChild("Trigger")
+	local outputValue = slider:WaitForChild("OutputValue")
+	local outputLabel = slider:WaitForChild("Label")
+	local keybindButton = script.Parent.Parent:WaitForChild("SpeedKeybind")
+	
+	local maxValue = 500
+	local minValue = 16
+	
+	outputValue.Value = minValue
+	fill.Size = UDim2.fromScale(0, 1)
+	outputLabel.Text = tostring(math.round(minValue))
+	
+	local tweenStyle = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local dragging = false
+	local currentKeybind = Enum.KeyCode.V
+	local speedEnabled = false
+	
+	local function UpdateSlider()
+		if not dragging then return end
+	
+		local mousePos = UserInputService:GetMouseLocation().X
+		local sliderStart = slider.AbsolutePosition.X
+		local sliderWidth = slider.AbsoluteSize.X
+	
+		local percent = math.clamp((mousePos - sliderStart) / sliderWidth, 0, 1)
+		local value = minValue + percent * (maxValue - minValue)
+	
+		TweenService:Create(fill, tweenStyle, {Size = UDim2.fromScale(percent, 1)}):Play()
+		outputValue.Value = value
+		outputLabel.Text = tostring(math.round(value))
+	
+		if speedEnabled and player.Character and player.Character:FindFirstChild("Humanoid") then
+			player.Character.Humanoid.WalkSpeed = value
+		end
+	end
+	
+	trigger.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			UpdateSlider()
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			UpdateSlider()
+		end
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.KeyCode == currentKeybind then
+			speedEnabled = not speedEnabled
+			local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+			if humanoid then
+				humanoid.WalkSpeed = speedEnabled and outputValue.Value or 16
+			end
+		end
+	end)
+	
+	local waitingForKey = false
+	
+	keybindButton.MouseButton1Click:Connect(function()
+		if waitingForKey then return end
+		keybindButton.Text = "Press a key..."
+		waitingForKey = true
+	
+		local conn
+		conn = UserInputService.InputBegan:Connect(function(input, gameProcessed)
+			if gameProcessed then return end
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				currentKeybind = input.KeyCode
+				keybindButton.Text = currentKeybind.Name
+				waitingForKey = false
+				conn:Disconnect()
+			end
+		end)
+	end)
+	
+end
+coroutine.wrap(CXKWF_fake_script)()
+local function XKZVF_fake_script() -- JumpSlider.Main 
+	local script = Instance.new('LocalScript', JumpSlider)
+
+	local Players = game:GetService("Players")
+	local TweenService = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local player = Players.LocalPlayer
+	local mouse = player:GetMouse()
+	
+	local slider = script.Parent
+	local fill = slider:WaitForChild("Fill")
+	local trigger = slider:WaitForChild("Trigger")
+	local outputValue = slider:WaitForChild("OutputValue")
+	local outputLabel = slider:WaitForChild("Label")
+	local keybindButton = script.Parent.Parent:WaitForChild("JumpKeybind")
+	
+	local maxValue = 500
+	local minValue = 7.2
+	
+	outputValue.Value = minValue
+	fill.Size = UDim2.fromScale(0, 1)
+	outputLabel.Text = tostring(math.round(minValue))
+	
+	local tweenStyle = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local dragging = false
+	local currentKeybind = Enum.KeyCode.C
+	local jumpEnabled = false
+	
+	local function UpdateSlider()
+		if not dragging then return end
+	
+		local mousePos = UserInputService:GetMouseLocation().X
+		local sliderStart = slider.AbsolutePosition.X
+		local sliderWidth = slider.AbsoluteSize.X
+	
+		local percent = math.clamp((mousePos - sliderStart) / sliderWidth, 0, 1)
+		local value = minValue + percent * (maxValue - minValue)
+	
+		TweenService:Create(fill, tweenStyle, {Size = UDim2.fromScale(percent, 1)}):Play()
+		outputValue.Value = value
+		outputLabel.Text = tostring(math.round(value))
+	
+		if jumpEnabled and player.Character and player.Character:FindFirstChild("Humanoid") then
+			player.Character.Humanoid.JumpHeight = value
+		end
+	end
+	
+	trigger.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			UpdateSlider()
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			UpdateSlider()
+		end
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.KeyCode == currentKeybind then
+			jumpEnabled = not jumpEnabled
+			local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+			if humanoid then
+				humanoid.JumpHeight = jumpEnabled and outputValue.Value or 7.2
+			end
+		end
+	end)
+	
+	local waitingForKey = false
+	
+	keybindButton.MouseButton1Click:Connect(function()
+		if waitingForKey then return end
+		keybindButton.Text = "Press a key..."
+		waitingForKey = true
+	
+		local conn
+		conn = UserInputService.InputBegan:Connect(function(input, gameProcessed)
+			if gameProcessed then return end
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				currentKeybind = input.KeyCode
+				keybindButton.Text = currentKeybind.Name
+				waitingForKey = false
+				conn:Disconnect()
+			end
+		end)
+	end)
+	
+end
+coroutine.wrap(XKZVF_fake_script)()
+local function VKZXOTW_fake_script() -- Noclip.LocalScript 
+	local script = Instance.new('LocalScript', Noclip)
+
+	local player = game.Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local toggleButton = script.Parent
+	local setKeybindButton = script.Parent.Parent:WaitForChild("NoclipKeybind")
+	local userInputService = game:GetService("UserInputService")
+	
+	local noclipEnabled = false
+	local currentKeybind = Enum.KeyCode.X
+	local keybindSet = false
+	
+	local function toggleNoclip()
+		noclipEnabled = not noclipEnabled
+		if noclipEnabled then
+			humanoid.Parent:WaitForChild("Head").CanCollide = false
+			humanoid.Parent:WaitForChild("LeftFoot").CanCollide = false
+			humanoid.Parent:WaitForChild("LeftHand").CanCollide = false
+			humanoid.Parent:WaitForChild("LeftLowerArm").CanCollide = false
+			humanoid.Parent:WaitForChild("LeftLowerLeg").CanCollide = false
+			humanoid.Parent:WaitForChild("RightFoot").CanCollide = false
+			humanoid.Parent:WaitForChild("RightHand").CanCollide = false
+			humanoid.Parent:WaitForChild("RightLowerArm").CanCollide = false
+			humanoid.Parent:WaitForChild("RightLowerLeg").CanCollide = false
+			humanoid.Parent:WaitForChild("UpperTorso").CanCollide = false
+			humanoid.Parent:WaitForChild("HumanoidRootPart").CanCollide = false
+			humanoid.Parent:WaitForChild("LowerTorso").CanCollide = false
+			humanoid.Parent:WaitForChild("RightUpperLeg").CanCollide = false
+			humanoid.Parent:WaitForChild("LeftUpperLeg").CanCollide = false
+			while noclipEnabled do
+				character:SetPrimaryPartCFrame(character.PrimaryPart.CFrame + character.HumanoidRootPart.Velocity * 0.1)
+				wait(0.1)
+			end
+		else
+			humanoid.Parent:WaitForChild("Head").CanCollide = true
+			humanoid.Parent:WaitForChild("LeftFoot").CanCollide = true
+			humanoid.Parent:WaitForChild("LeftHand").CanCollide = true
+			humanoid.Parent:WaitForChild("LeftLowerArm").CanCollide = true
+			humanoid.Parent:WaitForChild("LeftLowerLeg").CanCollide = true
+			humanoid.Parent:WaitForChild("RightFoot").CanCollide = true
+			humanoid.Parent:WaitForChild("RightHand").CanCollide = true
+			humanoid.Parent:WaitForChild("RightLowerArm").CanCollide = true
+			humanoid.Parent:WaitForChild("RightLowerLeg").CanCollide = true
+			humanoid.Parent:WaitForChild("HumanoidRootPart").CanCollide = true
+			humanoid.Parent:WaitForChild("UpperTorso").CanCollide = true
+			humanoid.Parent:WaitForChild("LowerTorso").CanCollide = true
+			humanoid.Parent:WaitForChild("RightUpperLeg").CanCollide = true
+			humanoid.Parent:WaitForChild("LeftUpperLeg").CanCollide = true
+		end
+	end
+	
+	userInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.UserInputType == Enum.UserInputType.Keyboard then
+			if input.KeyCode == currentKeybind then
+				toggleNoclip()
+			end
+		end
+	end)
+	
+	toggleButton.MouseButton1Click:Connect(function()
+		toggleNoclip()
+	end)
+	
+	setKeybindButton.MouseButton1Click:Connect(function()
+		keybindSet = false
+		toggleButton.Text = "Press a key for the new keybind"
+	
+		userInputService.InputBegan:Connect(function(input, gameProcessed)
+			if gameProcessed then return end
+			if not keybindSet then
+				if input.UserInputType == Enum.UserInputType.Keyboard then
+					currentKeybind = input.KeyCode
+					keybindSet = true
+					setKeybindButton.Text = currentKeybind.Name
+				end
+			end
+		end)
+	end)
+	
+	setKeybindButton.Text = currentKeybind.Name
+	
+end
+coroutine.wrap(VKZXOTW_fake_script)()
+local function OXANR_fake_script() -- Frame.Tabs 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Lock = script.Parent:WaitForChild("Lock")
+	local Player = script.Parent:WaitForChild("Player")
+	local Visual = script.Parent:WaitForChild("Visual")
+	local Misc = script.Parent:WaitForChild("Misc")
+	
+	local LockButton = script.Parent.Catagories:WaitForChild("Lock")
+	local PlayerButton = script.Parent.Catagories:WaitForChild("Player")
+	local VisualButton = script.Parent.Catagories:WaitForChild("Visual")
+	local MiscButton = script.Parent.Catagories:WaitForChild("Misc")
+	
+	LockButton.MouseButton1Click:Connect(function()
+		Lock.Visible = true
+		Player.Visible = false
+		Visual.Visible = false
+		Misc.Visible = false
+	end)
+	
+	PlayerButton.MouseButton1Click:Connect(function()
+		Lock.Visible = false
+		Player.Visible = true
+		Visual.Visible = false
+		Misc.Visible = false
+	end)
+	
+	VisualButton.MouseButton1Click:Connect(function()
+		Lock.Visible = false
+		Player.Visible = false
+		Visual.Visible = true
+		Misc.Visible = false
+	end)
+	
+	MiscButton.MouseButton1Click:Connect(function()
+		Lock.Visible = false
+		Player.Visible = false
+		Visual.Visible = false
+		Misc.Visible = true
+	end)
+end
+coroutine.wrap(OXANR_fake_script)()
+local function EBXJ_fake_script() -- Frame.Dragging 
+	local script = Instance.new('LocalScript', Frame)
+
+	local frame = script.Parent
+	local dragging = false
+	local dragInput, dragStart, startPos
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	
+	local targetPosition = frame.Position
+	local smoothSpeed = 0.15
+	
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+	
+	RunService.RenderStepped:Connect(function()
+		if dragging and dragInput then
+			local delta = dragInput.Position - dragStart
+			targetPosition = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+	
+		local currentPos = frame.Position
+		frame.Position = UDim2.new(
+			currentPos.X.Scale,
+			currentPos.X.Offset + (targetPosition.X.Offset - currentPos.X.Offset) * smoothSpeed,
+			currentPos.Y.Scale,
+			currentPos.Y.Offset + (targetPosition.Y.Offset - currentPos.Y.Offset) * smoothSpeed
+		)
+	end)
+	
+end
+coroutine.wrap(EBXJ_fake_script)()
+local function WROMDJ_fake_script() -- Fallen.Toggle 
+	local script = Instance.new('LocalScript', Fallen)
+
+	local UserInputService = game:GetService("UserInputService")
+	local gui = script.Parent
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.KeyCode == Enum.KeyCode.RightControl then
+			if gui.Enabled then
+				gui.Enabled = false
+			else
+				gui.Enabled = true
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(WROMDJ_fake_script)()
