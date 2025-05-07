@@ -435,7 +435,7 @@ Misc_2.ZIndex = 2
 
 -- Scripts:
 
-local function KGVQGPE_fake_script() -- Lock_3.LocalScript 
+local function SJDXQYN_fake_script() -- Lock_3.re 
 	local script = Instance.new('LocalScript', Lock_3)
 
 	local userInputService = game:GetService("UserInputService")
@@ -444,15 +444,10 @@ local function KGVQGPE_fake_script() -- Lock_3.LocalScript
 	local mouse = player:GetMouse()
 	local targetPart = workspace:WaitForChild("TargetPart")
 	
-	local aimlockKey = Enum.KeyCode.E
+	local aimlockKey = Enum.KeyCode.F
 	local aiming = false
 	local settingKey = false
 	local textButton = script.Parent.Parent:WaitForChild("LockKeybind")
-	
-	local function hardLockAim()
-		local targetPosition = targetPart.Position
-		camera.CFrame = CFrame.new(camera.CFrame.Position, targetPosition)
-	end
 	
 	local function enableAimlock()
 		aiming = true
@@ -462,20 +457,30 @@ local function KGVQGPE_fake_script() -- Lock_3.LocalScript
 		aiming = false
 	end
 	
-	local function updateCamera()
-		if aiming then
-			local closestPlayer = nil
-			local closestDistance = math.huge
-			for _, otherPlayer in pairs(game.Players:GetPlayers()) do
-				if otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") and otherPlayer ~= player then
-					local distance = (player.Character.HumanoidRootPart.Position - otherPlayer.Character.HumanoidRootPart.Position).Magnitude
+	local function getNearestPlayerToMouse()
+		local closestPlayer = nil
+		local closestDistance = math.huge
+		local mousePos = mouse.Hit.p
+	
+		for _, otherPlayer in pairs(game.Players:GetPlayers()) do
+			if otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") and otherPlayer ~= player then
+				local humanoidRoot = otherPlayer.Character:FindFirstChild("HumanoidRootPart")
+				if humanoidRoot then
+					local distance = (mousePos - humanoidRoot.Position).Magnitude
 					if distance < closestDistance then
 						closestDistance = distance
 						closestPlayer = otherPlayer
 					end
 				end
 			end
+		end
 	
+		return closestPlayer
+	end
+	
+	local function updateCamera()
+		if aiming then
+			local closestPlayer = getNearestPlayerToMouse()
 			if closestPlayer then
 				local humanoidRoot = closestPlayer.Character:FindFirstChild("HumanoidRootPart")
 				if humanoidRoot then
@@ -517,8 +522,8 @@ local function KGVQGPE_fake_script() -- Lock_3.LocalScript
 	game:GetService("RunService").RenderStepped:Connect(updateCamera)
 	
 end
-coroutine.wrap(KGVQGPE_fake_script)()
-local function HROWY_fake_script() -- SpeedSlider.Main 
+coroutine.wrap(SJDXQYN_fake_script)()
+local function YHCUTJ_fake_script() -- SpeedSlider.Main 
 	local script = Instance.new('LocalScript', SpeedSlider)
 
 	local Players = game:GetService("Players")
@@ -617,8 +622,8 @@ local function HROWY_fake_script() -- SpeedSlider.Main
 	end)
 	
 end
-coroutine.wrap(HROWY_fake_script)()
-local function GBBIEYJ_fake_script() -- JumpSlider.Main 
+coroutine.wrap(YHCUTJ_fake_script)()
+local function AEPQQ_fake_script() -- JumpSlider.Main 
 	local script = Instance.new('LocalScript', JumpSlider)
 
 	local Players = game:GetService("Players")
@@ -717,8 +722,8 @@ local function GBBIEYJ_fake_script() -- JumpSlider.Main
 	end)
 	
 end
-coroutine.wrap(GBBIEYJ_fake_script)()
-local function ZGMHXJZ_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(AEPQQ_fake_script)()
+local function SHDFSJ_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	local player = game.Players.LocalPlayer
@@ -803,8 +808,8 @@ local function ZGMHXJZ_fake_script() -- Noclip.LocalScript
 	setKeybindButton.Text = currentKeybind.Name
 	
 end
-coroutine.wrap(ZGMHXJZ_fake_script)()
-local function CUTXJNM_fake_script() -- Frame.Tabs 
+coroutine.wrap(SHDFSJ_fake_script)()
+local function DKEJK_fake_script() -- Frame.Tabs 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Lock = script.Parent:WaitForChild("Lock")
@@ -845,8 +850,8 @@ local function CUTXJNM_fake_script() -- Frame.Tabs
 		Misc.Visible = true
 	end)
 end
-coroutine.wrap(CUTXJNM_fake_script)()
-local function ZSAI_fake_script() -- Frame.Dragging 
+coroutine.wrap(DKEJK_fake_script)()
+local function CSXPOW_fake_script() -- Frame.Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -894,8 +899,8 @@ local function ZSAI_fake_script() -- Frame.Dragging
 	end)
 	
 end
-coroutine.wrap(ZSAI_fake_script)()
-local function HSYU_fake_script() -- Fallen.Toggle 
+coroutine.wrap(CSXPOW_fake_script)()
+local function SOPK_fake_script() -- Fallen.Toggle 
 	local script = Instance.new('LocalScript', Fallen)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -913,4 +918,4 @@ local function HSYU_fake_script() -- Fallen.Toggle
 	end)
 	
 end
-coroutine.wrap(HSYU_fake_script)()
+coroutine.wrap(SOPK_fake_script)()
