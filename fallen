@@ -13,43 +13,47 @@ local Player = Instance.new("ImageButton")
 local Visual = Instance.new("ImageButton")
 local Misc = Instance.new("ImageButton")
 local Lock_2 = Instance.new("Frame")
-local Section1 = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
 local Lock_3 = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local LockKeybind = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local Player_2 = Instance.new("Frame")
 local SpeedSlider = Instance.new("Frame")
 local Label = Instance.new("TextLabel")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local Trigger = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local Fill = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
 local UICorner_7 = Instance.new("UICorner")
-local UICorner_8 = Instance.new("UICorner")
 local SpeedKeybind = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local WalkSpeed = Instance.new("TextLabel")
 local JumpSlider = Instance.new("Frame")
 local Label_2 = Instance.new("TextLabel")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local Trigger_2 = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local Fill_2 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
 local UICorner_12 = Instance.new("UICorner")
-local UICorner_13 = Instance.new("UICorner")
 local JumpKeybind = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local JumpPower = Instance.new("TextLabel")
 local Noclip = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
 local Noclip_2 = Instance.new("TextLabel")
 local NoclipKeybind = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
 local Visual_2 = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local Misc_2 = Instance.new("Frame")
+local outputValue = Instance.new("NumberValue")
+outputValue.Parent = JumpSlider
+outputValue.Name = "OutputValue"
+local outputValue2 = Instance.new("NumberValue")
+outputValue2.Parent = SpeedSlider
+outputValue2.Name = "OutputValue"
 
 --Properties:
 
@@ -63,7 +67,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(31, 0, 47)
 Frame.BorderColor3 = Color3.fromRGB(30, 17, 42)
 Frame.BorderSizePixel = 10
 Frame.Position = UDim2.new(0.423575729, -222, 0.491640538, -273)
-Frame.Size = UDim2.new(0, 773, 0, 561)
+Frame.Size = UDim2.new(0, 432, 0, 561)
 
 UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = Frame
@@ -74,8 +78,8 @@ Catagories.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Catagories.BackgroundTransparency = 1.000
 Catagories.BorderColor3 = Color3.fromRGB(30, 17, 42)
 Catagories.BorderSizePixel = 0
-Catagories.Position = UDim2.new(0.0191082805, 0, 0.00699999603, 0)
-Catagories.Size = UDim2.new(0, 307, 0, 30)
+Catagories.Position = UDim2.new(0.0191082433, 0, 0.00700000348, 0)
+Catagories.Size = UDim2.new(0, 277, 0, 30)
 
 Lock.Name = "Lock"
 Lock.Parent = Catagories
@@ -144,21 +148,11 @@ Lock_2.BackgroundTransparency = 1.000
 Lock_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Lock_2.BorderSizePixel = 0
 Lock_2.Position = UDim2.new(0.0222929139, 0, 0.0951276943, 0)
-Lock_2.Size = UDim2.new(0, 739, 0, 498)
+Lock_2.Size = UDim2.new(0, 323, 0, 491)
 Lock_2.ZIndex = 2
 
-Section1.Name = "Section1"
-Section1.Parent = Lock_2
-Section1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Section1.BackgroundTransparency = 1.000
-Section1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Section1.BorderSizePixel = 0
-Section1.Size = UDim2.new(0, 313, 0, 303)
-
-UICorner_2.Parent = Section1
-
 Lock_3.Name = "Lock"
-Lock_3.Parent = Section1
+Lock_3.Parent = Lock_2
 Lock_3.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
 Lock_3.BackgroundTransparency = 1.000
 Lock_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -172,15 +166,15 @@ Lock_3.Text = "Lock"
 Lock_3.TextColor3 = Color3.fromRGB(117, 25, 255)
 Lock_3.TextSize = 14.000
 
-UICorner_3.CornerRadius = UDim.new(0, 4)
-UICorner_3.Parent = Lock_3
+UICorner_2.CornerRadius = UDim.new(0, 4)
+UICorner_2.Parent = Lock_3
 
 LockKeybind.Name = "LockKeybind"
-LockKeybind.Parent = Section1
+LockKeybind.Parent = Lock_2
 LockKeybind.BackgroundColor3 = Color3.fromRGB(43, 9, 93)
 LockKeybind.BorderColor3 = Color3.fromRGB(0, 0, 0)
 LockKeybind.BorderSizePixel = 0
-LockKeybind.Position = UDim2.new(0.251788735, 0, -0.247239411, 80)
+LockKeybind.Position = UDim2.new(0.205349103, 0, -0.137259796, 80)
 LockKeybind.Size = UDim2.new(0, 20, 0, 20)
 LockKeybind.Font = Enum.Font.Arcade
 LockKeybind.Text = "E"
@@ -189,8 +183,8 @@ LockKeybind.TextScaled = true
 LockKeybind.TextSize = 14.000
 LockKeybind.TextWrapped = true
 
-UICorner_4.CornerRadius = UDim.new(0, 4)
-UICorner_4.Parent = LockKeybind
+UICorner_3.CornerRadius = UDim.new(0, 4)
+UICorner_3.Parent = LockKeybind
 
 Player_2.Name = "Player"
 Player_2.Parent = Frame
@@ -199,7 +193,7 @@ Player_2.BackgroundTransparency = 1.000
 Player_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Player_2.BorderSizePixel = 0
 Player_2.Position = UDim2.new(0.022292994, 0, 0.0951276794, 0)
-Player_2.Size = UDim2.new(0, 739, 0, 498)
+Player_2.Size = UDim2.new(0, 323, 0, 491)
 Player_2.Visible = false
 Player_2.ZIndex = 2
 
@@ -224,8 +218,8 @@ Label.Text = "0"
 Label.TextColor3 = Color3.fromRGB(117, 25, 255)
 Label.TextSize = 14.000
 
-UICorner_5.CornerRadius = UDim.new(0, 4)
-UICorner_5.Parent = Label
+UICorner_4.CornerRadius = UDim.new(0, 4)
+UICorner_4.Parent = Label
 
 Trigger.Name = "Trigger"
 Trigger.Parent = SpeedSlider
@@ -239,8 +233,8 @@ Trigger.Text = ""
 Trigger.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger.TextSize = 14.000
 
-UICorner_6.CornerRadius = UDim.new(0, 4)
-UICorner_6.Parent = Trigger
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = Trigger
 
 Fill.Name = "Fill"
 Fill.Parent = SpeedSlider
@@ -250,11 +244,11 @@ Fill.BorderSizePixel = 0
 Fill.Size = UDim2.new(0, 0, 1, 0)
 Fill.ZIndex = 10
 
-UICorner_7.CornerRadius = UDim.new(0, 2)
-UICorner_7.Parent = Fill
+UICorner_6.CornerRadius = UDim.new(0, 2)
+UICorner_6.Parent = Fill
 
-UICorner_8.CornerRadius = UDim.new(0, 4)
-UICorner_8.Parent = Fill
+UICorner_7.CornerRadius = UDim.new(0, 4)
+UICorner_7.Parent = Fill
 
 SpeedKeybind.Name = "SpeedKeybind"
 SpeedKeybind.Parent = Player_2
@@ -270,8 +264,8 @@ SpeedKeybind.TextScaled = true
 SpeedKeybind.TextSize = 14.000
 SpeedKeybind.TextWrapped = true
 
-UICorner_9.CornerRadius = UDim.new(0, 4)
-UICorner_9.Parent = SpeedKeybind
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = SpeedKeybind
 
 WalkSpeed.Name = "Walk Speed"
 WalkSpeed.Parent = Player_2
@@ -307,8 +301,8 @@ Label_2.Text = "0"
 Label_2.TextColor3 = Color3.fromRGB(117, 25, 255)
 Label_2.TextSize = 14.000
 
-UICorner_10.CornerRadius = UDim.new(0, 4)
-UICorner_10.Parent = Label_2
+UICorner_9.CornerRadius = UDim.new(0, 4)
+UICorner_9.Parent = Label_2
 
 Trigger_2.Name = "Trigger"
 Trigger_2.Parent = JumpSlider
@@ -322,8 +316,8 @@ Trigger_2.Text = ""
 Trigger_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_2.TextSize = 14.000
 
-UICorner_11.CornerRadius = UDim.new(0, 4)
-UICorner_11.Parent = Trigger_2
+UICorner_10.CornerRadius = UDim.new(0, 4)
+UICorner_10.Parent = Trigger_2
 
 Fill_2.Name = "Fill"
 Fill_2.Parent = JumpSlider
@@ -333,11 +327,11 @@ Fill_2.BorderSizePixel = 0
 Fill_2.Size = UDim2.new(0, 0, 1, 0)
 Fill_2.ZIndex = 10
 
-UICorner_12.CornerRadius = UDim.new(0, 2)
-UICorner_12.Parent = Fill_2
+UICorner_11.CornerRadius = UDim.new(0, 2)
+UICorner_11.Parent = Fill_2
 
-UICorner_13.CornerRadius = UDim.new(0, 4)
-UICorner_13.Parent = Fill_2
+UICorner_12.CornerRadius = UDim.new(0, 4)
+UICorner_12.Parent = Fill_2
 
 JumpKeybind.Name = "JumpKeybind"
 JumpKeybind.Parent = Player_2
@@ -353,8 +347,8 @@ JumpKeybind.TextScaled = true
 JumpKeybind.TextSize = 14.000
 JumpKeybind.TextWrapped = true
 
-UICorner_14.CornerRadius = UDim.new(0, 4)
-UICorner_14.Parent = JumpKeybind
+UICorner_13.CornerRadius = UDim.new(0, 4)
+UICorner_13.Parent = JumpKeybind
 
 JumpPower.Name = "Jump Power"
 JumpPower.Parent = Player_2
@@ -383,8 +377,8 @@ Noclip.Text = "Noclip"
 Noclip.TextColor3 = Color3.fromRGB(117, 25, 255)
 Noclip.TextSize = 14.000
 
-UICorner_15.CornerRadius = UDim.new(0, 4)
-UICorner_15.Parent = Noclip
+UICorner_14.CornerRadius = UDim.new(0, 4)
+UICorner_14.Parent = Noclip
 
 Noclip_2.Name = "Noclip"
 Noclip_2.Parent = Player_2
@@ -413,8 +407,8 @@ NoclipKeybind.TextScaled = true
 NoclipKeybind.TextSize = 14.000
 NoclipKeybind.TextWrapped = true
 
-UICorner_16.CornerRadius = UDim.new(0, 4)
-UICorner_16.Parent = NoclipKeybind
+UICorner_15.CornerRadius = UDim.new(0, 4)
+UICorner_15.Parent = NoclipKeybind
 
 Visual_2.Name = "Visual"
 Visual_2.Parent = Frame
@@ -423,7 +417,7 @@ Visual_2.BackgroundTransparency = 1.000
 Visual_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Visual_2.BorderSizePixel = 0
 Visual_2.Position = UDim2.new(0.0219999999, 0, 0.0949999988, 0)
-Visual_2.Size = UDim2.new(0, 739, 0, 498)
+Visual_2.Size = UDim2.new(0, 323, 0, 491)
 Visual_2.Visible = false
 Visual_2.ZIndex = 6
 
@@ -446,13 +440,13 @@ Misc_2.BackgroundTransparency = 1.000
 Misc_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Misc_2.BorderSizePixel = 0
 Misc_2.Position = UDim2.new(0.022292994, 0, 0.0951276794, 0)
-Misc_2.Size = UDim2.new(0, 739, 0, 498)
+Misc_2.Size = UDim2.new(0, 323, 0, 491)
 Misc_2.Visible = false
 Misc_2.ZIndex = 2
 
 -- Scripts:
 
-local function NOLFB_fake_script() -- Lock_3.LocalScript 
+local function FSWQ_fake_script() -- Lock_3.LocalScript 
 	local script = Instance.new('LocalScript', Lock_3)
 
 	local userInputService = game:GetService("UserInputService")
@@ -543,8 +537,8 @@ local function NOLFB_fake_script() -- Lock_3.LocalScript
 	game:GetService("RunService").RenderStepped:Connect(updateCamera)
 	
 end
-coroutine.wrap(NOLFB_fake_script)()
-local function NKWZ_fake_script() -- SpeedSlider.Main 
+coroutine.wrap(FSWQ_fake_script)()
+local function YYXGQE_fake_script() -- SpeedSlider.Main 
 	local script = Instance.new('LocalScript', SpeedSlider)
 
 	local Players = game:GetService("Players")
@@ -643,8 +637,8 @@ local function NKWZ_fake_script() -- SpeedSlider.Main
 	end)
 	
 end
-coroutine.wrap(NKWZ_fake_script)()
-local function XDIOWRO_fake_script() -- JumpSlider.Main 
+coroutine.wrap(YYXGQE_fake_script)()
+local function CPCVF_fake_script() -- JumpSlider.Main 
 	local script = Instance.new('LocalScript', JumpSlider)
 
 	local Players = game:GetService("Players")
@@ -743,8 +737,8 @@ local function XDIOWRO_fake_script() -- JumpSlider.Main
 	end)
 	
 end
-coroutine.wrap(XDIOWRO_fake_script)()
-local function VLTAJGE_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(CPCVF_fake_script)()
+local function FKVIWNP_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	local player = game.Players.LocalPlayer
@@ -829,8 +823,8 @@ local function VLTAJGE_fake_script() -- Noclip.LocalScript
 	setKeybindButton.Text = currentKeybind.Name
 	
 end
-coroutine.wrap(VLTAJGE_fake_script)()
-local function IDFUBZG_fake_script() -- Frame.Tabs 
+coroutine.wrap(FKVIWNP_fake_script)()
+local function PEDHWK_fake_script() -- Frame.Tabs 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Lock = script.Parent:WaitForChild("Lock")
@@ -871,8 +865,8 @@ local function IDFUBZG_fake_script() -- Frame.Tabs
 		Misc.Visible = true
 	end)
 end
-coroutine.wrap(IDFUBZG_fake_script)()
-local function NIBRKN_fake_script() -- Frame.Dragging 
+coroutine.wrap(PEDHWK_fake_script)()
+local function IIVPZK_fake_script() -- Frame.Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -920,8 +914,8 @@ local function NIBRKN_fake_script() -- Frame.Dragging
 	end)
 	
 end
-coroutine.wrap(NIBRKN_fake_script)()
-local function MRDAFI_fake_script() -- Fallen.Toggle 
+coroutine.wrap(IIVPZK_fake_script)()
+local function CRXZZS_fake_script() -- Fallen.Toggle 
 	local script = Instance.new('LocalScript', Fallen)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -939,4 +933,24 @@ local function MRDAFI_fake_script() -- Fallen.Toggle
 	end)
 	
 end
-coroutine.wrap(MRDAFI_fake_script)()
+coroutine.wrap(CRXZZS_fake_script)()
+
+local function updatePlayerStats()
+	local player = game.Players.LocalPlayer
+	local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+
+	if humanoid then
+		local walkSpeedValue = SpeedSlider:WaitForChild("OutputValue").Value
+		local jumpPowerValue = JumpSlider:WaitForChild("OutputValue").Value
+
+		humanoid.WalkSpeed = walkSpeedValue
+		humanoid.JumpHeight = jumpPowerValue
+	end
+end
+
+-- Connect the Changed event of the OutputValue NumberValues
+SpeedSlider:WaitForChild("OutputValue").Changed:Connect(updatePlayerStats)
+JumpSlider:WaitForChild("OutputValue").Changed:Connect(updatePlayerStats)
+
+-- Initial update to set the values when the script runs
+updatePlayerStats()
