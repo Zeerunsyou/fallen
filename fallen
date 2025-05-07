@@ -452,7 +452,7 @@ Misc_2.ZIndex = 2
 
 -- Scripts:
 
-local function YQWW_fake_script() -- Lock_3.LocalScript 
+local function NOLFB_fake_script() -- Lock_3.LocalScript 
 	local script = Instance.new('LocalScript', Lock_3)
 
 	local userInputService = game:GetService("UserInputService")
@@ -460,10 +460,11 @@ local function YQWW_fake_script() -- Lock_3.LocalScript
 	local player = game.Players.LocalPlayer
 	local mouse = player:GetMouse()
 	
-	local aimlockKey = Enum.KeyCode.F
+	local aimlockKey = Enum.KeyCode.E
 	local aiming = false
 	local lockedPlayer = nil
 	local textButton = script.Parent.Parent:WaitForChild("LockKeybind")
+	local settingKey = false
 	
 	local function enableAimlock()
 		aiming = true
@@ -513,6 +514,13 @@ local function YQWW_fake_script() -- Lock_3.LocalScript
 	local function onKeyPress(input, gameProcessedEvent)
 		if gameProcessedEvent then return end
 	
+		if settingKey then
+			aimlockKey = input.KeyCode
+			settingKey = false
+			print("Keybind set to " .. aimlockKey.Name)
+			return
+		end
+	
 		if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == aimlockKey then
 			if aiming then
 				disableAimlock()
@@ -535,8 +543,8 @@ local function YQWW_fake_script() -- Lock_3.LocalScript
 	game:GetService("RunService").RenderStepped:Connect(updateCamera)
 	
 end
-coroutine.wrap(YQWW_fake_script)()
-local function SZWA_fake_script() -- SpeedSlider.Main 
+coroutine.wrap(NOLFB_fake_script)()
+local function NKWZ_fake_script() -- SpeedSlider.Main 
 	local script = Instance.new('LocalScript', SpeedSlider)
 
 	local Players = game:GetService("Players")
@@ -549,7 +557,7 @@ local function SZWA_fake_script() -- SpeedSlider.Main
 	local slider = script.Parent
 	local fill = slider:WaitForChild("Fill")
 	local trigger = slider:WaitForChild("Trigger")
-	local outputValue = slider:WaitForChild("OutputValue")
+	local outputValue = slider:WaitForChild("OutputValue", 5)
 	local outputLabel = slider:WaitForChild("Label")
 	local keybindButton = script.Parent.Parent:WaitForChild("SpeedKeybind")
 	
@@ -635,8 +643,8 @@ local function SZWA_fake_script() -- SpeedSlider.Main
 	end)
 	
 end
-coroutine.wrap(SZWA_fake_script)()
-local function FSWTW_fake_script() -- JumpSlider.Main 
+coroutine.wrap(NKWZ_fake_script)()
+local function XDIOWRO_fake_script() -- JumpSlider.Main 
 	local script = Instance.new('LocalScript', JumpSlider)
 
 	local Players = game:GetService("Players")
@@ -649,7 +657,7 @@ local function FSWTW_fake_script() -- JumpSlider.Main
 	local slider = script.Parent
 	local fill = slider:WaitForChild("Fill")
 	local trigger = slider:WaitForChild("Trigger")
-	local outputValue = slider:WaitForChild("OutputValue")
+	local outputValue = slider:WaitForChild("OutputValue", 5)
 	local outputLabel = slider:WaitForChild("Label")
 	local keybindButton = script.Parent.Parent:WaitForChild("JumpKeybind")
 	
@@ -735,8 +743,8 @@ local function FSWTW_fake_script() -- JumpSlider.Main
 	end)
 	
 end
-coroutine.wrap(FSWTW_fake_script)()
-local function FTTPTK_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(XDIOWRO_fake_script)()
+local function VLTAJGE_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	local player = game.Players.LocalPlayer
@@ -821,8 +829,8 @@ local function FTTPTK_fake_script() -- Noclip.LocalScript
 	setKeybindButton.Text = currentKeybind.Name
 	
 end
-coroutine.wrap(FTTPTK_fake_script)()
-local function OZHOK_fake_script() -- Frame.Tabs 
+coroutine.wrap(VLTAJGE_fake_script)()
+local function IDFUBZG_fake_script() -- Frame.Tabs 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Lock = script.Parent:WaitForChild("Lock")
@@ -863,8 +871,8 @@ local function OZHOK_fake_script() -- Frame.Tabs
 		Misc.Visible = true
 	end)
 end
-coroutine.wrap(OZHOK_fake_script)()
-local function YMETY_fake_script() -- Frame.Dragging 
+coroutine.wrap(IDFUBZG_fake_script)()
+local function NIBRKN_fake_script() -- Frame.Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frame = script.Parent
@@ -912,8 +920,8 @@ local function YMETY_fake_script() -- Frame.Dragging
 	end)
 	
 end
-coroutine.wrap(YMETY_fake_script)()
-local function BWTYLUO_fake_script() -- Fallen.Toggle 
+coroutine.wrap(NIBRKN_fake_script)()
+local function MRDAFI_fake_script() -- Fallen.Toggle 
 	local script = Instance.new('LocalScript', Fallen)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -931,4 +939,4 @@ local function BWTYLUO_fake_script() -- Fallen.Toggle
 	end)
 	
 end
-coroutine.wrap(BWTYLUO_fake_script)()
+coroutine.wrap(MRDAFI_fake_script)()
